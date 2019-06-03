@@ -69,7 +69,6 @@ openstack_host_distro_packages:
   - irqbalance
   - libkmod-dev
   - libkmod2
-  - "{% if hostvars[inventory_hostname]['ansible_kernel'] | version_compare('3.13.0-166', '>=') %}linux-modules-extra-{{ ansible_kernel }}{% else %}linux-image-extra-{{ ansible_kernel }}{% endif %}"
   - lvm2
   - python-software-properties
   - python-dev
